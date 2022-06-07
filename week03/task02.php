@@ -1,15 +1,12 @@
 <?php 
 
-	$length = 34;
-	$width = 35;
+	$amaount = 500000;
+	$VAT =7; //percentage
 
-	$Area=0;
-	$Area = $length * $width;
-	$parameter=0;
-	$parameter = 2 * $Area;
+	$deductAmount = ($VAT*100)/$amaount;
+	
 
-	echo $Area;
-	echo $parameter;
+	echo $deductAmount;
 
 
 ?>
