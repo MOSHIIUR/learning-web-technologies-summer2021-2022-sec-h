@@ -3,16 +3,55 @@
     <meta charset="UTF-8">
     <title>Document</title>
 </head>
-<body>    <table border='1'>
+<body>    <table border='1' style="width: 40%">
 
-	<tr>
-    <td colspan="2">Shapes to print </td>
+<tr>
+    <td>The Array to declare</td>
+    <td>Shapes to print </td>
 </tr>
 
 
 <tr>
 
-<td><?php
+    <td>
+
+    <table border='1', style="width: 100%;">
+        <?php
+
+$arr=[
+
+
+    [1, 2, 3, 'A'],
+    [1, 2, 'B', 'C'],
+    [1, 'D', 'E', 'F']
+];
+
+
+/* Use the loop to iterate the five rows of the array */
+for ($row = 0; $row < 3; $row++) {
+    echo "<tr>";
+
+    /* Use the loop to iterate the three columns of the array */
+    for ($col = 0; $col < 4; $col++) {
+
+        /* Read the value of the array based on row and column values */  
+        echo "<td>".$arr[$row][$col]."</td>";
+    }
+    echo "</tr>";
+ 
+}
+
+
+?>
+        </table>
+
+    </td>
+   
+   
+    <td>
+        <table border="1" style="width: 100%;">
+            <tr>
+                <td><?php
 
     $n=0;
     for ($i = 3; $i >0; $i--)
@@ -24,35 +63,39 @@
                 echo $n;
             }
         echo "<br>";
-       $n=0;
-       }
+    $n=0;
+    }
 
-    
- ?></td>
- 
- <td><?php
 
-    $q='A';
+    ?></td>
+                <td><?php
 
-    for ($m = 0; $m <$3; $m++)
-        {
-        
-        for($p =0 ; $p<=$m; $p++ )
+        $q='A';
+
+        for ($m = 0; $m <3; $m++)
             {
-        
-           
-                echo $q; 
-                $q++;
-            }
-        
-        echo "<br>";
+            
+            for($p =0 ; $p<=$m; $p++ )
+                {
+            
+            
+                    echo $q; 
+                    $q++;
+                }
+            
+            echo "<br>";
 
-       }
+        }
 
+
+?></td>
+            </tr>
+        </table>
+    </td>
     
- ?></td>
-    </tr>
-    </table>
+</tr>
+    
+</table>
 </body>
 </html>
 
