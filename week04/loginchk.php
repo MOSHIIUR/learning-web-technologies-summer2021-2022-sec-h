@@ -19,7 +19,7 @@ $arr = str_split($name);
 //array size
 $length = sizeof($arr);
 
-$status=true;
+$status=false;
 
 if($name != null && $wrdCount >=2)
 {
@@ -46,6 +46,8 @@ if($name != null && $wrdCount >=2)
     
     else $status = false;
 }
+
+else 'Null value is not allowed';
 
     if($status)
     {
