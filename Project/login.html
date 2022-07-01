@@ -1,30 +1,40 @@
+
 <center>
-<form action="logincheck.php" method="post" enctype="">
-    <h1>Welcome to University Management</h1><hr>
 
-    <h3>Admin Login</h3>
-    <table>
-        <tr>
-            <td>Username</td>
-            <td><input type="text" name="username" value=""></td>
-        </tr>
-        <tr>
-            <td>Password</td>
-            <td><input type="password" name="password" value=""></td>
-        </tr>
+    <form action="home.php" method="post" enctype="">     <!-- sending the form value to logincheck.php-->
+        
+        <h1>Welcome to University Management</h1><hr>
+        <h3>Admin Login</h3>
 
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
+        <table>
 
-        <tr>
-            <td><input type="submit" name="" value="Login"></td>
-            <td><a href="resetPass.html">Forget Password?</a></td>
-        </tr>
+            <!--    username    -->
+            <tr>
+                <td>Username</td>
+                <td><input type="text" name="name" value=""></td>
+            </tr>
+            
+            <!--    pass    -->
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password" value=""></td>
+            </tr>
+
+            <!--    space/break<br>    -->
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
 
 
-    </table>
-</form>
+            <!--    submit/reset pass    -->
+            <tr>
+                <td><input type="submit" name="" value="Login"></td>
+                <td><a href="resetPass.html">Forget Password?</a></td>
+            </tr>
+
+        </table>
+
+    </form>
 
 </center>
