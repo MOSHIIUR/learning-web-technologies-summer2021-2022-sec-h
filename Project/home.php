@@ -1,16 +1,6 @@
 
 <?php
 
-    require('header.php');
-    $username = $_REQUEST['name'];
-    $password = $_REQUEST['password'];
-    
-    if($username != null && $password != null)
-    {
-            //set cookies for credentials
-    setcookie('name', $username, time()+356985, '/');
-    //setcookie('password', $password, time()+356985, '/');
-    }
 
 	if(isset($_COOKIE['name']))
 	{
@@ -41,7 +31,7 @@
             <tr>
                 <td align="center"><a href="search.html">Search</a></td>
                 <td align="center"><a href="userProfile.php">View Profile</a></td>
-                <td align="center"><a href="addStd.html">Students</a></td>
+                <td align="center"><a href="listStd.php">Students</a></td>
                 <td align="center"><a href="facultyprofile.html">Faculties</a></td>
                 <td align="center"><a href="addCourse.html">Courses</a></td>
                 <td align="center"><a href="notice.html">Notices</a></td>
@@ -58,7 +48,20 @@
     
     else
     {
-            echo "<h1>nvalid Request to Accessing Home Page</h1>";
+
+            $username = $_REQUEST['name'];
+            $password = $_REQUEST['password'];
+            
+            if($username != null && $password != null)
+            {
+                    //set cookies for credentials
+            setcookie('name', $username, time()+356985, '/');
+            //setcookie('password', $password, time()+356985, '/');
+            }
+
+            else echo '<center><h1>Illigal Access</h1></center>';
+    
+        
     } 
 
 ?>
