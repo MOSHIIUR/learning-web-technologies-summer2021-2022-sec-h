@@ -63,12 +63,10 @@
             <td colspan="2" align="center"><input type="submit" value="Change nformation"></td>
         </tr>
 
-
-
-
-
-
 </table>
+
+    <!--    home page link    -->
+    <h3>Back to<a href=home.php> Home</a>?</h3>
 
 </center>
 
