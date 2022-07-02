@@ -33,7 +33,7 @@
     <!--    Password  -->
     <tr>
         <td align="right">Password:</td>
-        <td><?php echo $password;?></td>
+        <td><?php echo $pass;?></td>
     </tr>
 
     <!--    phn no.  -->

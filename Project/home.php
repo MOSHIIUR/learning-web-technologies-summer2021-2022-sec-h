@@ -1,12 +1,16 @@
 
 <?php
 
+    require('header.php');
     $username = $_REQUEST['name'];
     $password = $_REQUEST['password'];
     
-    //set cookies for credentials
+    if($username != null && $password != null)
+    {
+            //set cookies for credentials
     setcookie('name', $username, time()+356985, '/');
-    setcookie('password', $password, time()+356985, '/');
+    //setcookie('password', $password, time()+356985, '/');
+    }
 
 	if(isset($_COOKIE['name']))
 	{
@@ -14,13 +18,38 @@
         ?> 
     <center>
 
+    <br><br><br><br><br>
+        
         <h1>Wecome Home, <?php echo $_COOKIE['name'];?> </h1>
-        <a href="search.html">Search</a>
-        <a href="userProfile.php">View Profile</a>
-        <a href="addStd.html">Student Profiles</a>
-        <a href="facultyprofile.html">Faculty Profiles</a>
-        <a href="notice.html">Notices</a>
-        <a href="addCourse.html">Courses</a>
+
+    <br><br><br>
+        
+        <table>
+            
+            <!--    image    -->
+            <tr>
+                <td><img src="search.PNG" width="100px" height="100px"></td>
+                <td><img src="profile.JPG" width="100px" height="100px"></td>
+                <td><img src="student.JPG" width="100px" height="100px"></td>
+                <td><img src="faculty.jpg" width="100px" height="100px"></td>
+                <td><img src="course.PNG" width="100px" height="100px"></td>
+                <td><img src="notice.PNG" width="100px" height="100px"></td>
+                <td><img src="logout.JPG" width="100px" height="100px"></td>
+            </tr>
+            
+            <!--    text/href    -->
+            <tr>
+                <td align="center"><a href="search.html">Search</a></td>
+                <td align="center"><a href="userProfile.php">View Profile</a></td>
+                <td align="center"><a href="addStd.html">Students</a></td>
+                <td align="center"><a href="facultyprofile.html">Faculties</a></td>
+                <td align="center"><a href="addCourse.html">Courses</a></td>
+                <td align="center"><a href="notice.html">Notices</a></td>
+                <td align="center"><a href="logout.php">Sign Out</a></td>
+
+            </tr>
+
+        </table>
 
     </center>
 
