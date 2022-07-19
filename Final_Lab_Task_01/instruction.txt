@@ -1,0 +1,5 @@
+A insert function is created in function.php which will insert the 
+sign up/ registration data to the db.
+
+db = user
+table name = userProfile
